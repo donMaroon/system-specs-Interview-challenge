@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from '../../intecerptors/AxiosInterceptors'
+// import axios from '../../intecerptors/AxiosInterceptors'
 
 
 
@@ -7,8 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = async (e) => {
-    e.PreventDefault
+  const handleLogin = async () => {
     // try {
     //   const response = await axios.post('your-api-endpoint/login', {
     //     email,
@@ -20,7 +19,7 @@ const Login = () => {
     //   console.error('Login failed:', error);
     // }
 
-    const users = JSON.parse(localStorage.getItem('signinInfo'));
+    const users = JSON.parse(localStorage.getItem('signinInfo') || '[]');
     console.log(users)
     console.log(email)
     console.log(password)
