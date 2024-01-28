@@ -17,7 +17,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [isregistered, setIsregistered] = useState(true)
+  const [isregistered, setIsregistered] = useState(false)
   const [users, setUsers] = useState<signinInfoTyp[]>([])
   const [facts, setFacts] = useState<factsTyp[]>([])
   const menuRef = useRef<HTMLDivElement>(null)
