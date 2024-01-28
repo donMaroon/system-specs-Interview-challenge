@@ -17,7 +17,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [isregistered, setIsregistered] = useState(false)
+  const [isregistered, setIsregistered] = useState(true)
   const [users, setUsers] = useState<signinInfoTyp[]>([])
   const [facts, setFacts] = useState<factsTyp[]>([])
   const menuRef = useRef<HTMLDivElement>(null)
@@ -129,9 +129,6 @@ const Register = () => {
             </button>
         </div>
 
-        {/* <button onClick={handleLogOut}>
-            logout
-        </button> */}
       </form>
       </div>
       <div className='register-image'>
@@ -152,9 +149,8 @@ const Register = () => {
                     <p style={{textAlign: "center"}}>{facts[0].category}: {facts[0].setup}, {facts[0].delivery}</p>
                   )}
                   
-                  <div className='button' >
-                    <button className='a' type="button" onClick={() => setIsregistered(false)}>close</button>                                     
-                  </div>
+
+                    <button className='modal-btn' type="button" onClick={() => setIsregistered(false)}>close</button>                                     
               </div>
             </div>
           </div> 

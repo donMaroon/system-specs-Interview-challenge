@@ -185,6 +185,16 @@ form label span {
 
 }
 
+.modal-btn{
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
 @media screen and (max-width: 992px) {
 
 
